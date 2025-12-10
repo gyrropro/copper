@@ -10,12 +10,12 @@ module.exports = {
         return Math.floor(Math.random() * max);
     }
 
-        const user = UserModel.findById({_id: interaction.user.id}) ??
-            await UserModel.create({ _id: interaction.user.id });
-
         const earned = getRandomInt(700)
-        user.balance += earned;
-        user.save();
+
+            await UserModel.updateOne(
+        { _id: interaction.user.id },
+        { $inc: { balance: earned } },
+        { upsert: true });
 
         if(earned == 0) {
             const exampleEmbed = new EmbedBuilder()
@@ -34,13 +34,5 @@ module.exports = {
                 
             await interaction.reply({ embeds: [exampleEmbed] });
         }
-
-		const exampleEmbed = new EmbedBuilder()
-	.setColor(0xDE8050)
-	.setTitle(`you earned ${earned} coins!`)
-	.setTimestamp()
-	.setFooter({ text: '©2025 copper', iconURL: 'https://i.imgur.com/StODuzm.png' });
-
-	await interaction.reply({ embeds: [exampleEmbed] });
 	},
 };
