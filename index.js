@@ -1,8 +1,11 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits, MessageFlags } = require('discord.js');
+const { connect } = require('node:http2');
+const { console } = require('node:inspector');
+const { mongoose } = require('mongoose');
 require('dotenv').config();
-const token = process.env.DISCORD_TOKEN;
+const token = process.env.DISCORD_TOKEN; const dburl = process.env.DBURL;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });// Create a new client instance
 
@@ -35,5 +38,9 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
+
+mongoose.connect(dburl)
+    .then((result) => console.log('connected to db'))
+    .catch((err) => console.log(err));
 
 client.login(token);// Log in to Discord with your client's token
