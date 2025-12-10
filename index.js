@@ -1,9 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits, MessageFlags } = require('discord.js');
-const { connect } = require('node:http2');
-const { console } = require('node:inspector');
-const { mongoose } = require('mongoose');
+const mongoose = require('mongoose');
 require('dotenv').config();
 const token = process.env.DISCORD_TOKEN; const dburl = process.env.DBURL;
 
