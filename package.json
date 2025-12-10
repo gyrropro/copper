@@ -1,0 +1,11 @@
+{
+  "name": "copper",
+  "version": "2.0.0",
+  "description": "a utility bot made for the purpouse of education",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gyrropro",
+  "license": "ISC"
+}
