@@ -1,0 +1,18 @@
+{
+    "beg": {
+        "successful": [
+            "a passerby trew a few coins your way",
+            "a kind man in a top hat gave you lunch money",
+            "you were given some coins, but you didnt see who donated them",
+            "a man in a bussnes suit, gave you some coins",
+            "a man walking by, was able to spare you some coins",
+            "you picked up a wallet that was left beihind"
+        ],
+        "failed": [
+            "the man you begged to, spat on you",
+            "a group of colage girls mocked you",
+            "you tried to beg, but no one payed atension",
+            "you asked a buissness woman for coins, but she was on the phone"
+        ]
+    }
+}
