@@ -7,8 +7,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('beg')
 		.setDescription('begs for coins')
-		.setContexts(InteractionContextType.Guild, InteractionContextType.BotDM),
-
+		.setContexts(InteractionContextType.Guild, InteractionContextType.PrivateChannel, InteractionContextType.BotDM),
 	async execute(interaction) {
 
 		// Current UNIX timestamp (in seconds)
