@@ -24,7 +24,9 @@
         },
         "economey": {
             "beg": "Begs for coins",
-            "balance": "Displays a user's balance."
+            "balanceCheck": "Displays a user's balance.",
+            "balanceTop": "Displays top ten balances",
+            "give": "Gives a user coins"
         }
     }
 }

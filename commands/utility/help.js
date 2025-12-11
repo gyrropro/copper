@@ -25,8 +25,10 @@ module.exports = {
 			.setTitle('Economey')
 			.setDescription('economey commands:')
             .addFields(
-                { name: '`/balance` `user`:', value: dialogue.help.economey.balance },
-                { name: "`/beg`:", value: dialogue.help.economey.beg }
+                { name: '`/balance` `check` `user`:', value: dialogue.help.economey.balanceCheck },
+                { name: '`/balance` `top` `user`:', value: dialogue.help.economey.balanceTop },
+                { name: "`/beg`:", value: dialogue.help.economey.beg },
+                { name: '`/give` `user`:', value: dialogue.help.economey.give }
             )
 			.setTimestamp()
 			.setFooter({
@@ -36,7 +38,7 @@ module.exports = {
 
 		// Send reply with the embed
 		await interaction.reply({ embeds: [Embed] });
-        
+
         } else if(interaction.options.getString('category') == 'utility') {
             		// Basic response embed
 		const Embed = new EmbedBuilder()
