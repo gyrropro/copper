@@ -10,7 +10,19 @@ const UserSchema = new Schema({
         type: Number,
         default: 0,
         required: true
+    },
+    cooldowns: {
+        type: Map,
+        default: () => new Map(),
+        required: true
+    },
+    items: {
+        type: Map,
+        default: () => new Map(),
+        required: true
     }
+
+
 }, { timestamps: true }, { versionkey: false })
 
 const UserModel = mongoose.model('User', UserSchema)

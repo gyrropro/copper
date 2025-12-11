@@ -1,17 +1,24 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const UserModel = require('../../schema/User.js')
 
 module.exports = {
-	data: new SlashCommandBuilder().setName('ping').setDescription('Replies with Pong!'),
-	
-	async execute(interaction) {
-		const exampleEmbed = new EmbedBuilder()
-	.setColor(0xDE8050)
-	.setTitle('Pong!')
-	.setDescription('you have pinged the bot sucsessfuly!')
-	.setTimestamp()
-	.setFooter({ text: '©2025 copper', iconURL: 'https://i.imgur.com/StODuzm.png' });
+	data: new SlashCommandBuilder()
+		.setName('ping')
+		.setDescription('Replies with Pong!'),
 
-	await interaction.reply({ embeds: [exampleEmbed] });
+	async execute(interaction) {
+
+		// Basic response embed
+		const exampleEmbed = new EmbedBuilder()
+			.setColor(0xDE8050)
+			.setTitle('Pong!')
+			.setDescription('You have pinged the bot successfully!')
+			.setTimestamp()
+			.setFooter({
+				text: '©2025 copper',
+				iconURL: 'https://i.imgur.com/StODuzm.png'
+			});
+
+		// Send reply with the embed
+		await interaction.reply({ embeds: [exampleEmbed] });
 	},
 };
