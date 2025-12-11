@@ -43,7 +43,7 @@ module.exports = {
 		// Construct balance response
 		const balanceEmbed = new EmbedBuilder()
 			.setColor(0xDE8050)
-			.setTitle(`${user.username} has ${doc.balance} ${emojis.coin}`)
+			.setTitle(`${user.username} has ${doc.balance.toLocaleString()} ${emojis.coin}`)
 			.setTimestamp()
 			.setFooter({
 				text: '©2025 copper',
