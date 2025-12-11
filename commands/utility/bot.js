@@ -19,8 +19,7 @@ module.exports = {
                     const exampleEmbed = new EmbedBuilder()
             .setColor(0xDE8050)
             .setTitle('bot info:')
-            .setDescription(botInfo.description)
-            .addFields(
+            .setDescription(botInfo.description)            .addFields(
                 { name: 'author:', value: botInfo.author, inline: true },
                 { name: "servers:", value: interaction.client.guilds.cache.size.toLocaleString(), inline: true }
             )
