@@ -1,11 +1,13 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, InteractionContextType } = require('discord.js');
 const UserModel = require('../../schema/User.js');
 const emojis = require('../../jsons/emojis.json');
+const dialogue = require('../../jsons/dialogue.json');
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('beg')
-		.setDescription('begs for coins'),
+		.setDescription('begs for coins')
+		.setContexts(InteractionContextType.Guild, InteractionContextType.BotDM),
 
 	async execute(interaction) {
 
@@ -50,6 +52,10 @@ module.exports = {
 			const exampleEmbed = new EmbedBuilder()
 				.setColor(0xDE8050)
 				.setTitle(`you failed to earn any ${emojis.coin}`)
+				.addFields({
+					name: ' ',
+					value: dialogue.beg.failed[Math.floor(Math.random() * dialogue.beg.failed.length)]
+				})
 				.setTimestamp()
 				.setFooter({
 					text: '©2025 copper',
@@ -73,6 +79,10 @@ module.exports = {
 		const exampleEmbed = new EmbedBuilder()
 			.setColor(0xDE8050)
 			.setTitle(`you earned ${earned} ${emojis.coin}!`)
+			.addFields({
+   				name: ' ',
+    			value: dialogue.beg.successful[Math.floor(Math.random() * dialogue.beg.successful.length)]
+			})
 			.setTimestamp()
 			.setFooter({
 				text: '©2025 copper',

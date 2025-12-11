@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, InteractionContextType } = require('discord.js');
 const UserModel = require('../../schema/User.js');
 const emojis = require('../../jsons/emojis.json');
 
@@ -11,7 +11,8 @@ module.exports = {
 				.setName('user')
 				.setDescription('User to check the balance of.')
 				.setRequired(false)
-		),
+		)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.PrivateChannel, InteractionContextType.BotDM),
 
 	async execute(interaction) {
 

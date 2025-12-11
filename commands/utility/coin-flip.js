@@ -1,10 +1,11 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, InteractionContextType } = require('discord.js');
 const emojis = require('../../jsons/emojis.json');
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('coin-flip')
-		.setDescription('Flips a coin.'),
+		.setDescription('Flips a coin.')
+		.setContexts(InteractionContextType.Guild, InteractionContextType.PrivateChannel, InteractionContextType.BotDM),
 
 	async execute(interaction) {
 
