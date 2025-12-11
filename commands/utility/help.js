@@ -26,7 +26,7 @@ module.exports = {
 			.setDescription('economey commands:')
             .addFields(
                 { name: '`/balance` `check` `user`:', value: dialogue.help.economey.balanceCheck },
-                { name: '`/balance` `top` `user`:', value: dialogue.help.economey.balanceTop },
+                { name: '`/balance` `top`:', value: dialogue.help.economey.balanceTop },
                 { name: "`/beg`:", value: dialogue.help.economey.beg },
                 { name: '`/give` `user`:', value: dialogue.help.economey.give }
             )
