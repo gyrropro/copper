@@ -6,7 +6,7 @@ const dialogue = require('../../jsons/dialogue.json');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('beg')
-		.setDescription('begs for coins')
+		.setDescription('Begs for coins')
 		.setContexts(InteractionContextType.Guild, InteractionContextType.PrivateChannel, InteractionContextType.BotDM),
 	async execute(interaction) {
 

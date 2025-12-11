@@ -14,5 +14,17 @@
             "you tried to beg, but no one payed atension",
             "you asked a buissness woman for coins, but she was busy on the phone"
         ]
+    },
+    "help": {
+        "utility": {
+            "help": "Shows how to use commands",
+            "botInfo": "Gives info about copper",
+            "ping": "Replies with Pong!",
+            "coinFlip": "Flips a coin."
+        },
+        "economey": {
+            "beg": "Begs for coins",
+            "balance": "Displays a user's balance."
+        }
     }
 }

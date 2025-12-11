@@ -8,7 +8,7 @@ module.exports = {
         .addSubcommand((subcommand) =>
 		subcommand
 			.setName('info')
-			.setDescription('Info about copper')
+			.setDescription('Gives info about copper')
 	)
 
         .setContexts(InteractionContextType.Guild, InteractionContextType.PrivateChannel, InteractionContextType.BotDM),
