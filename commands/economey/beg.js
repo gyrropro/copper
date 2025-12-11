@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const UserModel = require('../../schema/User.js')
+const emojis = require('../../jsons/emojis.json')
 
 module.exports = {
 	data: new SlashCommandBuilder().setName('beg').setDescription('begs for coins'),
@@ -20,7 +21,7 @@ module.exports = {
         if(earned == 0) {
             const exampleEmbed = new EmbedBuilder()
 	            .setColor(0xDE8050)
-	            .setTitle(`you failed to earn coins`)
+	            .setTitle(`you failed to earn anything`)
 	            .setTimestamp()
 	            .setFooter({ text: '©2025 copper', iconURL: 'https://i.imgur.com/StODuzm.png' });
 
@@ -28,7 +29,7 @@ module.exports = {
         } else {
             const exampleEmbed = new EmbedBuilder()
 	            .setColor(0xDE8050)
-	            .setTitle(`you earned ${earned} coins!`)
+	            .setTitle(`you earned ${earned} ${emojis.coin}!`)
 	            .setTimestamp()
 	            .setFooter({ text: '©2025 copper', iconURL: 'https://i.imgur.com/StODuzm.png' });
                 
