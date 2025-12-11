@@ -37,7 +37,6 @@ module.exports = {
 		const exampleEmbed = new EmbedBuilder()
 	.setColor(0xDE8050)
 	.setTitle(`${user.username} has ${doc.balance} ${emojis.coin}`)
-	.setDescription('you have pinged the bot sucsessfuly!')
 	.setTimestamp()
 	.setFooter({ text: '©2025 copper', iconURL: 'https://i.imgur.com/StODuzm.png' });
 
