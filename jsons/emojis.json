@@ -1,7 +1,9 @@
 {
-    "coin": "<:copper_coin:1324191802022035567>",
+    "coin": "<a:copper_coin:1449044039633731777>",
     "leftArrow": "<:left_arrow:1329884599270117396>",
     "rightArrow": "<:right_arrow:1329884558472118352>",
     "reload": "<:reload:1329884577560264805>",
-    "copper": "<:copper:1448474570263625943>"
+    "copper": "<:copper_blink:1449074130346446858>",
+    "copperAnimated": "<a:copper:1449074078991253594>",
+    "coin_unanimated": "<:copper_coin_unanimated:1449066485636137142>"
 }

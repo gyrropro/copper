@@ -77,7 +77,7 @@ module.exports = {
 		// Success message
 		const exampleEmbed = new EmbedBuilder()
 			.setColor(0xDE8050)
-			.setTitle(`you earned ${earned} ${emojis.coin}!`)
+			.setTitle(`you earned ${earned} ${emojis.coin} !`)
 			.addFields({
    				name: ' ',
     			value: dialogue.beg.successful[Math.floor(Math.random() * dialogue.beg.successful.length)]

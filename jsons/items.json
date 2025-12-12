@@ -1,0 +1,9 @@
+{
+    "items": {
+        "cup": {
+            "isBuyable": false,
+            "isSellable": true,
+            "isDigable": true
+        }
+    }
+}
